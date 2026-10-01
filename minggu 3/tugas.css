@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 480px;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    margin: -30px -30px 25px -30px;
+    padding: 18px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    margin-bottom: 12px;
+}
+
+td {
+    padding: 8px 4px;
+    vertical-align: top;
+    color: #333333;
+    font-size: 14px;
+}
+
+.kolom1 {
+    width: 25%;
+    font-weight: 600;
+}
+
+.kolom2 {
+    width: 5%;
+    text-align: center;
+}
+
+.kolom3 {
+    width: 70%;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+    outline: none;
+}
+
+#txtNama, #txtKota {
+    width: 100%;
+}
+
+.date-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#txtTgl, #txtBulan {
+    width: 55px;
+    text-align: center;
+}
+
+#txtTahun {
+    width: 85px;
+    text-align: center;
+}
+
+.date-group span {
+    font-weight: bold;
+    color: #666;
+}
+
+#txtAlamat {
+    height: 80px;
+    resize: vertical;
+}
+
+.btn-container {
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#btnKirim, #btnCancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    flex: 1;
+}
+
+#btnKirim {
+    background-color: #27ae60;
+    color: white;
+}
+
+#btnKirim:hover {
+    background-color: #219653;
+}
+
+#btnCancel {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#btnCancel:hover {
+    background-color: #c0392b;
+}
+
+#btnKirim:active, #btnCancel:active {
+    transform: scale(0.98);
+}
