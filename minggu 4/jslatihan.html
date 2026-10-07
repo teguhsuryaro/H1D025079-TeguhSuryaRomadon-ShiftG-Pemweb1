@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan - Praktikum Pemrograman Web</title>
+</head>
+<body>
+
+    <form action="" method="POST" name="frmlatihan" onsubmit="return cekLatihan()">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>: <input type="text" id="nama" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>: <input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Komentar</td>
+                <td>: <textarea id="komentar" name="komentar" rows="5" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="simpan" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function cekLatihan(){
+            const nama = document.getElementById("nama");
+            const email = document.getElementById("email");
+            const komentar = document.getElementById("komentar");
+
+            // 1. Pengecekan field kosong
+            if (nama.value.trim() === ""){
+                alert("Nama tidak boleh kosong!");
+                nama.focus();
+                return false;
+            }
+            if (email.value.trim() === ""){
+                alert("Email tidak boleh kosong!");
+                email.focus();
+                return false;
+            }
+            if (komentar.value.trim() === ""){
+                alert("Komentar tidak boleh kosong!");
+                komentar.focus();
+                return false;
+            }
+
+            // 2. Pengecekan nama tidak memiliki angka atau simbol (hanya huruf dan spasi)
+            const namaRegex = /^[a-zA-Z\s]+$/;
+            if (!namaRegex.test(nama.value)) {
+                alert("Nama hanya boleh berisi huruf dan spasi (tidak boleh angka atau simbol)!");
+                nama.focus();
+                return false;
+            }
+
+            alert("Form berhasil disimpan!");
+            return true;
+        }
+    </script>
+    
+</body>
+</html>
